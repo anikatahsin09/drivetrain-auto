@@ -1,0 +1,1341 @@
+```css
+/* =========================================================
+   DRIVETRAIN AUTO
+   COMPLETE STYLE SHEET
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    padding: 15px 7%;
+
+    background: #111827;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO AREA */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+}
+
+.logo-area img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+.logo-area h2 {
+    font-size: 22px;
+    white-space: nowrap;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 550px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    /*
+       IMPORTANT:
+       Your Corolla image must be inside:
+
+       cars/Corolla.jpeg
+    */
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("./cars/Corolla.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+
+    padding: 30px;
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   BARVIDA MEMBER
+   BOTTOM RIGHT
+========================================================= */
+
+.barvida-member {
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 4px;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(5px);
+
+    color: white;
+
+    text-align: left;
+
+    z-index: 5;
+}
+
+.barvida-member span {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.barvida-member small {
+    font-size: 12px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-section {
+    padding: 60px 7%;
+
+    text-align: center;
+
+    background: white;
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+}
+
+#searchInput {
+    width: 90%;
+    max-width: 600px;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   CARS SECTION
+========================================================= */
+
+.cars-section {
+    padding: 70px 7%;
+}
+
+.cars-section > h2 {
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-bottom: 40px;
+}
+
+.car-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   CAR CARD
+========================================================= */
+
+.car-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* CAR IMAGE */
+
+.car-card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    background: #e5e7eb;
+}
+
+
+/* =========================================================
+   CAR INFORMATION
+========================================================= */
+
+.car-info {
+    padding: 22px;
+}
+
+.car-info h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.car-info p {
+    margin: 8px 0;
+
+    line-height: 1.5;
+}
+
+
+/* PRICE */
+
+.price {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-top: 15px !important;
+}
+
+
+/* =========================================================
+   CAR STATUS
+========================================================= */
+
+.available {
+    color: #16a34a;
+
+    font-weight: bold;
+}
+
+.sold {
+    color: #dc2626;
+
+    font-weight: bold;
+}
+
+.preorder {
+    color: #d97706;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BUY / PRE-ORDER BUTTON
+========================================================= */
+
+.car-info button {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.car-info button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+    padding: 70px 7%;
+
+    text-align: center;
+
+    background: white;
+}
+
+.about-section h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    padding: 70px 7%;
+
+    text-align: center;
+
+    background: #f5f6f8;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    margin: 10px auto;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================================================
+   OWNER LOGIN
+========================================================= */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(17, 24, 39, 0.08),
+            rgba(17, 24, 39, 0.08)
+        );
+
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+
+/* LOGIN LOGO */
+
+.login-logo {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+.login-box h1 {
+    margin-bottom: 8px;
+}
+
+.login-box > p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.login-box form {
+    text-align: left;
+}
+
+.login-box label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #2563eb;
+}
+
+.login-box button {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #1d4ed8;
+}
+
+.login-box a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard {
+    padding: 60px 7%;
+
+    min-height: 100vh;
+}
+
+.dashboard > h1 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.dashboard > p {
+    color: #666;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   DASHBOARD CARDS
+========================================================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+}
+
+.dashboard-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-card h2 {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.dashboard-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+.dashboard-card button {
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.dashboard-card button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-btn {
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #dc2626;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================================================
+   ADD CAR SECTION
+========================================================= */
+
+.add-car-section {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+
+    max-width: 900px;
+
+    margin-bottom: 40px;
+}
+
+.add-car-section h2 {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.add-car-section > p {
+    color: #666;
+}
+
+
+/* =========================================================
+   CAR FORM
+========================================================= */
+
+#carForm {
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+#carForm input,
+#carForm select,
+#carForm textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+}
+
+#carForm input:focus,
+#carForm select:focus,
+#carForm textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.08);
+}
+
+#carForm button {
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#carForm button:hover {
+    background: #1d4ed8;
+}
+
+#carForm button:disabled {
+    background: #9ca3af;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   EDIT / DELETE
+========================================================= */
+
+.edit-btn {
+    width: 48% !important;
+
+    display: inline-block;
+
+    background: #2563eb !important;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8 !important;
+}
+
+.delete-btn {
+    width: 48% !important;
+
+    display: inline-block;
+
+    background: #dc2626 !important;
+}
+
+.delete-btn:hover {
+    background: #b91c1c !important;
+}
+
+
+/* =========================================================
+   ORDER FORM
+========================================================= */
+
+.order-section {
+    padding: 70px 7%;
+
+    background: #f5f6f8;
+}
+
+.order-box {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.10);
+}
+
+.order-box h2 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+#selectedCar {
+    background: #f3f4f6;
+
+    padding: 15px;
+
+    border-radius: 7px;
+
+    margin-bottom: 25px;
+
+    line-height: 1.7;
+}
+
+#orderForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#orderForm label {
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+#orderForm input,
+#orderForm select,
+#orderForm textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+}
+
+#orderForm input:focus,
+#orderForm select:focus,
+#orderForm textarea:focus {
+    border-color: #2563eb;
+}
+
+#orderForm button {
+    padding: 13px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#orderForm button:hover {
+    background: #1d4ed8;
+}
+
+#cancelOrderBtn {
+    background: #6b7280 !important;
+}
+
+#cancelOrderBtn:hover {
+    background: #4b5563 !important;
+}
+
+#orderMessage {
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   ORDERS
+========================================================= */
+
+.orders-section {
+    padding: 60px 7%;
+
+    background: #f5f6f8;
+}
+
+.orders-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(300px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+.order-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+}
+
+.order-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 22px;
+}
+
+.order-card p {
+    margin: 8px 0;
+
+    line-height: 1.5;
+}
+
+.order-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.order-buttons button {
+    flex: 1;
+
+    min-width: 100px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.confirm-order-btn {
+    background: #16a34a;
+}
+
+.confirm-order-btn:hover {
+    background: #15803d;
+}
+
+.cancel-order-btn {
+    background: #d97706;
+}
+
+.cancel-order-btn:hover {
+    background: #b45309;
+}
+
+.delete-order-btn {
+    background: #dc2626;
+}
+
+.delete-order-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================================================
+   MOBILE - TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 480px;
+
+        background-position: center center;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+
+    /* BARVIDA */
+
+    .barvida-member {
+        right: 15px;
+
+        left: auto;
+
+        bottom: 15px;
+
+        padding: 8px 13px;
+    }
+
+    .barvida-member span {
+        font-size: 12px;
+    }
+
+    .barvida-member small {
+        font-size: 10px;
+    }
+
+
+    /* SEARCH */
+
+    .search-section {
+        padding: 50px 5%;
+    }
+
+
+    /* CARS */
+
+    .cars-section {
+        padding: 50px 5%;
+    }
+
+
+    /* DASHBOARD */
+
+    .dashboard {
+        padding: 40px 5%;
+    }
+
+    .dashboard > h1 {
+        font-size: 30px;
+    }
+
+
+    /* ADD CAR */
+
+    .add-car-section {
+        padding: 25px;
+    }
+
+
+    /* ORDER */
+
+    .order-section {
+        padding: 50px 5%;
+    }
+
+    .order-box {
+        padding: 25px;
+    }
+
+    .order-buttons {
+        flex-direction: column;
+    }
+
+    .order-buttons button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo-area h2 {
+        font-size: 19px;
+    }
+
+    .logo-area img {
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 450px;
+
+        background-position: center center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-btn {
+        padding: 12px 22px;
+    }
+
+
+    /* SEARCH */
+
+    .search-section {
+        padding: 45px 5%;
+    }
+
+    .search-section h2 {
+        font-size: 26px;
+    }
+
+
+    /* CARS */
+
+    .cars-section > h2 {
+        font-size: 30px;
+    }
+
+    .car-card img {
+        height: 210px;
+    }
+
+
+    /* LOGIN */
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+
+    /* EDIT / DELETE */
+
+    .edit-btn,
+    .delete-btn {
+        width: 100% !important;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* BARVIDA */
+
+    .barvida-member {
+        right: 10px;
+
+        left: auto;
+
+        bottom: 10px;
+    }
+
+}
+```

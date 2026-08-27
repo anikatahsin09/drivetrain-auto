@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Drivetrain Auto</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo-area">
+
+            <img
+                src="drivetrainlogo.jpeg"
+                alt="Drivetrain Auto Logo"
+            >
+
+            <h2>
+                Drivetrain Auto
+            </h2>
+
+        </div>
+
+
+        <!-- CUSTOMER NAVIGATION -->
+
+        <nav>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#cars">
+                Cars
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+        <div class="hero-content">
+
+            <h1>
+                Find Your Dream Car
+            </h1>
+
+
+            <p>
+                Explore quality cars at the best
+                prices and find the perfect car
+                for you with Drivetrain Auto.
+            </p>
+
+
+            <a
+                href="#cars"
+                class="hero-btn"
+            >
+                Explore Cars
+            </a>
+
+        </div>
+
+
+        <!-- BARVIDA - BOTTOM RIGHT -->
+
+        <div class="barvida-member">
+
+            <span>
+                BARVIDA
+            </span>
+
+            <small>
+                Member ID: 2356
+            </small>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SEARCH
+    ========================== -->
+
+    <section
+        class="search-section"
+    >
+
+        <h2>
+            Find Your Car
+        </h2>
+
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search car by name or model..."
+        >
+
+    </section>
+
+
+
+    <!-- =========================
+         CARS
+    ========================== -->
+
+    <section
+        id="cars"
+        class="cars-section"
+    >
+
+        <h2>
+            Our Cars
+        </h2>
+
+
+        <div
+            id="carContainer"
+            class="car-container"
+        >
+
+            <p>
+                Loading cars...
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CUSTOMER ORDER
+    ========================== -->
+
+    <section
+        id="orderSection"
+        class="order-section"
+        style="display: none;"
+    >
+
+        <div class="order-box">
+
+            <h2>
+                🚗 Place Your Order
+            </h2>
+
+
+            <p id="selectedCar">
+                Selected Car
+            </p>
+
+
+            <form id="orderForm">
+
+                <label for="customerName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label for="customerPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Enter phone number"
+                    required
+                >
+
+
+                <label for="customerEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="Enter email address"
+                    required
+                >
+
+
+                <label for="orderType">
+                    Order Type
+                </label>
+
+                <select id="orderType">
+
+                    <option value="Buy">
+                        Buy
+                    </option>
+
+                    <option value="Pre-Order">
+                        Pre-Order
+                    </option>
+
+                </select>
+
+
+                <label for="customerMessage">
+                    Message
+                </label>
+
+                <textarea
+                    id="customerMessage"
+                    placeholder="Write your message..."
+                    rows="4"
+                ></textarea>
+
+
+                <button type="submit">
+                    Submit Order
+                </button>
+
+
+                <button
+                    type="button"
+                    id="cancelOrderBtn"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+
+            <p id="orderMessage"></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+        id="about"
+        class="about-section"
+    >
+
+        <h2>
+            About Drivetrain Auto
+        </h2>
+
+
+        <p>
+            Drivetrain Auto is a modern
+            automobile marketplace where
+            customers can explore quality
+            vehicles, check prices, view
+            specifications and place
+            purchase or pre-order requests.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section
+        id="contact"
+        class="contact-section"
+    >
+
+        <h2>
+            Contact Us
+        </h2>
+
+
+        <p>
+            For car buying and pre-order
+            information, contact us.
+        </p>
+
+
+        <p>
+            📞 Phone:
+            01917703397
+        </p>
+
+
+        <p>
+            📧 Email:
+            Drivetrainautobd@gmail.com
+        </p>
+
+
+        <p>
+            📱 WhatsApp:
+            01917703397
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Drivetrain Auto.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+
+</body>
+
+</html>
