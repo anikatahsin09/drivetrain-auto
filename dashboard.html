@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Owner Dashboard - Drivetrain Auto</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo-area">
+
+        <img
+            src="drivetrainlogo.jpeg"
+            alt="Drivetrain Auto Logo"
+        >
+
+        <h2>Drivetrain Auto</h2>
+
+    </div>
+
+    <button
+        id="logoutBtn"
+        class="logout-btn"
+    >
+        Logout
+    </button>
+
+</header>
+
+
+<main class="dashboard">
+
+    <h1>Owner Dashboard</h1>
+
+    <p>
+        Welcome to Drivetrain Auto Admin Panel
+    </p>
+
+
+    <!-- DASHBOARD CARDS -->
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+
+            <h2>🚗</h2>
+
+            <h3>Manage Cars</h3>
+
+            <p>
+                Add, edit and delete cars.
+            </p>
+
+            <button
+                onclick="document.getElementById('manageCars').scrollIntoView()"
+            >
+                Manage Cars
+            </button>
+
+        </div>
+
+
+        <!-- ORDERS -->
+
+        <div class="dashboard-card">
+
+            <h2>📦</h2>
+
+            <h3>Orders</h3>
+
+            <p>
+                View customer orders and pre-orders.
+            </p>
+
+            <button
+                id="viewOrdersBtn"
+            >
+                View Orders
+            </button>
+
+        </div>
+
+
+        <div class="dashboard-card">
+
+            <h2>🟢</h2>
+
+            <h3>Car Status</h3>
+
+            <p>
+                Manage Available, Sold Out and Pre-Order status.
+            </p>
+
+            <button
+                onclick="document.getElementById('manageCars').scrollIntoView()"
+            >
+                Manage Status
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADD CAR -->
+
+    <section class="add-car-section">
+
+        <h2>Add New Car</h2>
+
+        <p>
+            Add car information from here.
+        </p>
+
+
+        <form id="carForm">
+
+            <input
+                type="text"
+                id="carName"
+                placeholder="Car Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="carModel"
+                placeholder="Model"
+                required
+            >
+
+            <input
+                type="text"
+                id="carPrice"
+                placeholder="Price"
+                required
+            >
+
+            <input
+                type="text"
+                id="carMileage"
+                placeholder="Mileage"
+                required
+            >
+
+            <input
+                type="file"
+                id="carImage"
+                accept="image/*"
+                required
+            >
+
+            <select id="carStatus">
+
+                <option value="Available">
+                    Available
+                </option>
+
+                <option value="Sold Out">
+                    Sold Out
+                </option>
+
+                <option value="Pre-Order">
+                    Pre-Order
+                </option>
+
+            </select>
+
+
+            <textarea
+                id="carDescription"
+                placeholder="Car Description"
+                rows="5"
+            ></textarea>
+
+
+            <button
+                type="submit"
+            >
+                Add Car
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- MANAGE CARS -->
+
+    <section
+        id="manageCars"
+        class="add-car-section"
+    >
+
+        <h2>Manage Cars</h2>
+
+        <p>
+            Edit or delete cars from your inventory.
+        </p>
+
+
+        <div
+            id="dashboardCarContainer"
+            class="car-container"
+        >
+
+            <p>
+                Loading cars...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ORDERS SECTION -->
+
+    <section
+        id="ordersSection"
+        class="add-car-section orders-section"
+        style="display: none;"
+    >
+
+        <h2>📦 Customer Orders</h2>
+
+        <p>
+            View customer purchase and pre-order requests.
+        </p>
+
+
+        <div
+            id="ordersContainer"
+        >
+
+            <p>
+                Loading orders...
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script
+    type="module"
+    src="script.js"
+></script>
+
+</body>
+
+</html>
